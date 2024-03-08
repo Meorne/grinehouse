@@ -1,5 +1,6 @@
 {
   "extends": [ "plugin:prettier/recommended" ],
+  "ignorePatterns": [ "*.html" ],
   "overrides": [
     {
       "files": [ "*.tsx" ],
