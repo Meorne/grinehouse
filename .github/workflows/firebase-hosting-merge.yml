@@ -9,9 +9,13 @@ name: Deploy to Firebase Hosting on merge
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    steps:
+    environment: Grinehouse
+    steps:     
       - uses: actions/checkout@v4
-      - run: yarn install --frozen-lockfile && yarn build
+      - name: Build App
+        run: yarn install --frozen-lockfile && yarn build
+        env: 
+          REACT_APP_FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

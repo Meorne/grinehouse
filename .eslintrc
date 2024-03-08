@@ -3,12 +3,15 @@
   "ignorePatterns": [ "*.html" ],
   "overrides": [
     {
-      "files": [ "*.tsx" ],
+      "files": [ "*.tsx", "*.ts" ],
       "extends": [ "eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier" ],
       "parser": "@typescript-eslint/parser",
       "plugins": [ "@typescript-eslint" ],
       "parserOptions": {
         "project": "tsconfig.json"
+      },
+      "rules": {
+        "quotes": [ "error", "backtick" ]
       }
     },
     {
