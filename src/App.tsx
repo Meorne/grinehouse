@@ -1,23 +1,26 @@
-import { Box, Grid } from '@mui/material';
-import './App.scss';
-import { ReactComponent as Grineouille } from './assets/grinouillelogo.svg';
+import './global.scss';
+import { Stack as MuiStack, ThemeProvider, styled } from '@mui/material';
+import Page from './Page';
+import { THEME } from './utils/theme';
 
-const App = () => {
+const Stack = styled(MuiStack)(({ theme }) => ({
+  [theme.breakpoints.down(`md`)]: {
+    display: `block`,
+  },
+}));
+
+function App() {
   return (
-    <Box
-      sx={{ flexGrow: 1, width: 1024, margin: `0 auto` }}
-      alignItems="center"
-    >
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={8}>
-          <Grineouille />
-        </Grid>
-        <Grid item xs={12} md={8}>
-          <Grineouille />
-        </Grid>
-      </Grid>
-    </Box>
+    <ThemeProvider theme={THEME}>
+      <Stack
+        alignItems="center"
+        justifyContent="center"
+        sx={{ height: `100vh` }}
+      >
+        <Page />
+      </Stack>
+    </ThemeProvider>
   );
-};
+}
 
 export default App;

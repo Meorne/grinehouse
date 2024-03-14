@@ -18,4 +18,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = firebaseConfig?.apiKey ? initializeApp(firebaseConfig) : undefined;
-export const analytics = app && getAnalytics(app);
+const analytics = app && getAnalytics(app);
+
+export { app, analytics };

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+$mainColor: #9EF5A6;
+html {
+    height: 100%;
+}
+body {
+  background: $mainColor;
+  background-image: url('./assets/backgroundbulle.svg');
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+  #root {
+    height: 100%;
+  }
+}
