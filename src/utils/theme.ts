@@ -32,6 +32,7 @@ const mainTheme = () => {
           root: {
             display: `inline-block`,
             lineHeight: 1.3,
+            whiteSpace: `break-spaces`,
 
             '&.typo-bg-black': {
               fontWeight: `bold`,

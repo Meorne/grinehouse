@@ -5,7 +5,10 @@ import { THEME } from './utils/theme';
 
 const Stack = styled(MuiStack)(({ theme }) => ({
   [theme.breakpoints.down(`md`)]: {
-    display: `block`,
+    alignItem: `normal`,
+    justifyContet: `normal`,
+    padding: `16px`,
+    height: `auto`,
   },
 }));
 
