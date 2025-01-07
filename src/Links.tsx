@@ -18,9 +18,10 @@ const Links = () => {
   const linkList: LinkElements[] = [
     {
       Icon: CvIcon,
-      href: `CV.txt`,
+      href: `./CV-2025-COMTENICOLAS.pdf`,
       oProps: {
-        download: true,
+        download: false,
+        target: `_blank`,
       },
     },
     {
