@@ -26,7 +26,7 @@ const Links = () => {
     },
     {
       Icon: BehanceIcon,
-      href: `https://www.behance.net/KrapoPlay`,
+      href: `https://www.behance.net/GrineHouse`,
       oProps: {
         target: `_blank`,
       },
