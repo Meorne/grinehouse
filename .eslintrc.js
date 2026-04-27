@@ -1,9 +1,5 @@
 const commonTsConfig = (oRules = {}) => ({
-  extends: [
-    `airbnb`,
-    `airbnb-typescript`,
-    `plugin:@typescript-eslint/recommended`,
-  ],
+  extends: [`plugin:@typescript-eslint/recommended`],
   parser: `@typescript-eslint/parser`,
   parserOptions: {
     project: `tsconfig.json`,
